@@ -111,7 +111,7 @@ export default class Configuration implements ConfigurationInterface {
   }
 
   async rootQuery(fragment: string) {
-    console.log('executing', fragment);
+    console.log('executing', fragment, 'with variables', variables);
     try {
       const response = await this.client.query({
         query: gql(fragment),

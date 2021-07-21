@@ -137,7 +137,7 @@ export default class Configuration implements ConfigurationInterface {
   }
 
   async mutate(fragment: string, variables: Obj) {
-    console.log('executing', fragment);
+    console.log('executing', fragment, 'with variables', variables);
     try {
       const response = await this.client.mutate({
         mutation: gql(fragment),
